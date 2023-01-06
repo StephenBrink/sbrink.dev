@@ -14,13 +14,21 @@ import Layout from '../layouts/Layout.astro';
 			</div>
 		</div>
 		<div class="main-info">
+			<p>
+				Hello and welcome to my personal site! I am a software engineer with over
+				 two years of experience. I am currently working at Missouri Employers Mutual 
+				 as a software engineer and recently took on the role of team lead. In this role, 
+				 I have had the opportunity to define team standards and lead an upgrade initiative 
+				 for our portal applications. I am excited to continue learning and 
+				 growing in my career.
+			</p>
 		</div>
 	</main>
 </Layout>
 
 <style>
 	main {
-		margin: auto;
+		margin: 30px;
 		display: flex;
 		flex-direction: column;
 		height: 100%;
@@ -33,12 +41,12 @@ import Layout from '../layouts/Layout.astro';
 	.header-container {
 		min-width: 500px;
 		display: flex;
+		margin-bottom: 10px;
 	}
 	.header-info {
 		display: flex;
 		flex-direction: column;
 		align-items:flex-start;
-		margin: 20px;
 	}
 	.header-text h1 {
 		font-size: 40px;
@@ -53,6 +61,11 @@ import Layout from '../layouts/Layout.astro';
 		margin: 0;
 	}
 	.main-info {
-		margin: 50px;
+		max-width: 50rem;
+	}
+	.main-info p {
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 25px;
 	}
 </style>
