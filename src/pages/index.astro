@@ -12,6 +12,28 @@ import Layout from '../layouts/Layout.astro';
 					<h2>Software Engineer in Columbia, MO</h2>
 				</div>
 			</div>
+			<div class="header-links">
+				<a href="https://twitter.com/_StephenBrink"
+				target="_blank">
+					Twitter
+				</a>
+				<a href="https://github.com/StephenBrink"
+				target="_blank">
+					GitHub
+				</a>
+				<a href="https://www.linkedin.com/in/stephen-brink-708036141/"
+					target="_blank">
+					LinkedIn
+				</a>
+				<a href="https://twitter.com/_StephenBrink"
+				target="_blank">
+					Resume
+				</a>
+				<a href="https://twitter.com/_StephenBrink"
+				target="_blank">
+					Blog
+				</a>
+			</div>
 		</div>
 		<div class="main-info">
 			<p>
@@ -41,6 +63,7 @@ import Layout from '../layouts/Layout.astro';
 	.header-container {
 		min-width: 500px;
 		display: flex;
+		flex-direction: column;
 		margin-bottom: 10px;
 	}
 	.header-info {
@@ -59,6 +82,17 @@ import Layout from '../layouts/Layout.astro';
 		font-weight: 400;
 		color: #5f5f5f;
 		margin: 0;
+	}
+	.header-links {
+		margin-top: 10px;
+		display: flex;
+	}
+	.header-links a {
+		margin-right: 40px;
+		font-size: 16px;
+		font-weight: 400;
+
+		color: black;
 	}
 	.main-info {
 		max-width: 50rem;
