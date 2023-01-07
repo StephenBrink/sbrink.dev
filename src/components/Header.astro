@@ -1,0 +1,84 @@
+---
+// export interface Props {
+// 	title: string;
+// 	body: string;
+// 	href: string;
+// }
+
+// const { href, title, body } = Astro.props;
+---
+
+<div class="header-container">
+    <div class="header-info">
+        <img class="self-img" src="/imgs/self.png">
+        <div class="header-text">
+            <h1>Stephen Brink</h1>
+            <h2>Software Engineer in Columbia, MO</h2>
+        </div>
+    </div>
+    <div class="header-links">
+		<a href="/">
+            Bio
+        </a>
+		<a href="/resume">
+            Resume
+        </a>
+        <a href="/blog">
+            Blog
+        </a>
+        <a href="https://twitter.com/StephenBrinkDev"
+        target="_blank">
+            Twitter
+        </a>
+        <a href="https://github.com/StephenBrink"
+        target="_blank">
+            GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/stephen-brink-708036141/"
+            target="_blank">
+            LinkedIn
+        </a>
+    </div>
+</div>
+
+<style>
+    .self-img {
+		border-radius: 45px;
+		width: 175px;
+		height: 175px;
+	}
+	.header-container {
+		min-width: 500px;
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 10px;
+	}
+	.header-info {
+		display: flex;
+		flex-direction: column;
+		align-items:flex-start;
+	}
+	.header-text h1 {
+		font-size: 4rem;
+		font-weight: 400;
+		color: black;
+		margin: 0;
+	}
+	.header-text h2 {
+		font-size: 1.5rem;
+		font-weight: 300;
+		color: #5f5f5f;
+		margin: 0;
+	}
+	.header-links {
+		margin-top: 10px;
+		display: flex;
+	}
+	.header-links a {
+		margin-right: 40px;
+		font-size: 1rem;
+		font-weight: 400;
+
+		color: black;
+	}
+</style>
