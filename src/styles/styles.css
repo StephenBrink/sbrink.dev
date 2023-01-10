@@ -66,4 +66,9 @@
   view-transition-name: main-header;
   contain: layout;
 }
+
+.nav-container {
+  view-transition-name: main-navbar;
+  contain: layout;
+}
   
