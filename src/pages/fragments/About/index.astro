@@ -1,19 +1,30 @@
-<div class="main-info">
-    <p>
-        Hello and welcome to my personal site! I am a software engineer with over
-         two years of experience. I am currently working at Missouri Employers Mutual 
-         as a software engineer and recently took on the role of team lead. In this role, 
-         I have had the opportunity to define team standards and lead an upgrade initiative 
-         for our portal applications. I am excited to continue learning and 
-         growing in my career.
-    </p>
+---
+import SideNav from "../../../components/SideNav.astro";
+---
+
+<div class="main-container">
+    <div class="main-info">
+        <p>
+            Hello and welcome to my personal site! I am a software engineer with over
+             two years of experience. I am currently working at Missouri Employers Mutual 
+             as a software engineer and recently took on the role of team lead. In this role, 
+             I have had the opportunity to define team standards and lead an upgrade initiative 
+             for our portal applications. I am excited to continue learning and 
+             growing in my career.
+        </p>
+    </div>
+    <SideNav activeTab="Bio" />
 </div>
 
 <style>
-	.main-info {
-		max-width: 50rem;
+	.main-container {
+        display: flex;
 	}
+    .main-info {
+        width: 45rem;
+    }
 	.main-info p {
+        margin-top: 0;
 		font-size: 1.5rem;
 		font-weight: 300;
 	}

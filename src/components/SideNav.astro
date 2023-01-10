@@ -1,0 +1,65 @@
+---
+export interface Props {
+	activeTab: string;
+}
+
+const { activeTab } = Astro.props;
+---
+
+<div class="nav-container">
+	<a href="/" class={ activeTab == 'Bio' ? 'active-nav-link' : 'nav-link' }>
+		Bio
+	</a>
+	<a href="/resume" class={ activeTab == 'Resume' ? 'active-nav-link' : 'nav-link' }>
+		Resume
+	</a>
+	<a href="/blog" class={ activeTab == 'Blog' ? 'active-nav-link' : 'nav-link' }>
+		Blog
+	</a>
+</div>
+
+<style>
+	.nav-container {
+		display: flex;
+		flex-direction: column;
+		margin-left: 30px;
+	}
+	.nav-link {
+		margin-bottom: 20px;
+		font-size: 1rem;
+		font-weight: 400;
+		
+		border-color: black;
+		border-width: 1px;
+		border-style: solid;
+		padding: 5px;
+		width: 65px;
+		text-align: center;
+		text-decoration: none;
+		border-radius: 10px;
+
+		color: black;
+	}
+
+	.nav-link:hover {
+		background-color: #e7e7e7;
+	}
+
+	.active-nav-link {
+		margin-bottom: 20px;
+		font-size: 1rem;
+		font-weight: 400;
+		
+		border-color: black;
+		border-width: 1px;
+		border-style: solid;
+		padding: 5px;
+		width: 65px;
+		text-align: center;
+		text-decoration: none;
+		border-radius: 10px;
+
+		background-color: black;
+		color: white;
+	}
+</style>

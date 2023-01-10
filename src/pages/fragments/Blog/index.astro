@@ -1,14 +1,25 @@
-<div class="main-info">
-    <p>
-        I love to write.
-    </p>
+---
+import SideNav from "../../../components/SideNav.astro";
+---
+
+<div class="main-container">
+	<div class="main-info">
+		<p>
+			I love to write.
+		</p>
+	</div>
+	<SideNav activeTab="Blog" />
 </div>
 
 <style>
+	.main-container {
+		display: flex;
+	}
 	.main-info {
-		max-width: 50rem;
+		width: 45rem;
 	}
 	.main-info p {
+		margin-top: 0;
 		font-size: 1.5rem;
 		font-weight: 300;
 	}
