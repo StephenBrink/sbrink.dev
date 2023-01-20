@@ -1,0 +1,73 @@
+---
+export interface Props {
+	jobData: object
+}
+
+const { jobData } = Astro.props;
+---
+
+<div class="resume-item-container">
+    <div class="resume-header">
+        <div class="job-text">
+            <h1>{jobData.frontmatter.jobTitle}</h1> 
+            <h2>{jobData.frontmatter.companyName}</h2>
+            <h3>{jobData.frontmatter.startAndEnd}</h3>
+        </div>
+        <img class="company-img" src={jobData.frontmatter.imageURL}>
+    </div>
+    <br />
+    <div class="job-responsibilities">
+        <ul class="responsibility-list">
+            {jobData.frontmatter.responsabilities.map((responsability) => <li>{responsability}</li>)}
+        </ul>
+    </div>
+</div>
+
+<style>
+    .resume-item-container {
+        margin-bottom: 40px;
+    }
+    .company-img {
+		max-width: 100px;
+        max-height: 50px;
+        margin-right: 10px;
+	}
+	.resume-header {
+		min-width: 400px;
+		display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+
+		border-bottom-color: #cdcdcd;
+		border-bottom-style: solid;
+		border-bottom-width: 2px;
+		padding: 10px;
+		padding-right: 0;
+	}
+	.job-text h1 {
+		font-size: 2.5rem;
+		font-weight: 400;
+		color: black;
+		margin: 0;
+	}
+	.job-text h2 {
+		font-size: 1.5rem;
+		font-weight: 300;
+		color: #5f5f5f;
+		margin: 0;
+	}
+    .job-text h3 {
+		font-size: 1.25rem;
+		font-weight: 300;
+		color: #5f5f5f;
+		margin: 0;
+	}
+    .responsibility-list {
+        margin: 0;
+    }
+    .responsibility-list li {
+        margin-bottom: 10px;
+        font-size: 1rem;
+        font-weight: 300;
+    }
+</style>

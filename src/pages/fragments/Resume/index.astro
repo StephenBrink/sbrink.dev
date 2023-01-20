@@ -1,12 +1,13 @@
 ---
 import SideNav from "../../../components/SideNav.astro";
+import ResumeItem from "../../../components/ResumeItem.astro"
+
+const allJobs = await Astro.glob('./jobs/*.md');
 ---
 
 <div class="main-container">
 	<div class="main-info">
-		<p>
-			I have had a job before.
-		</p>
+		{allJobs.map((job) => <ResumeItem jobData={job} />)}
 	</div>
 	<SideNav activeTab="Resume" />
 </div>
@@ -17,10 +18,5 @@ import SideNav from "../../../components/SideNav.astro";
 	}
 	.main-info {
 		width: 45rem;
-	}
-	.main-info p {
-		margin-top: 0;
-		font-size: 1.5rem;
-		font-weight: 300;
 	}
 </style>
