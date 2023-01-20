@@ -41,8 +41,7 @@ const { jobData } = Astro.props;
 		border-bottom-color: #cdcdcd;
 		border-bottom-style: solid;
 		border-bottom-width: 2px;
-		padding: 10px;
-		padding-right: 0;
+		padding-bottom: 10px;
 	}
 	.job-text h1 {
 		font-size: 2.5rem;
@@ -66,8 +65,13 @@ const { jobData } = Astro.props;
         margin: 0;
     }
     .responsibility-list li {
-        margin-bottom: 10px;
-        font-size: 1rem;
+        margin-bottom: 20px;
+        font-size: 1.25rem;
         font-weight: 300;
+        list-style: none;
+        text-indent: -2.3%;
+    }
+    .responsibility-list li:before {
+        content: "- ";
     }
 </style>
