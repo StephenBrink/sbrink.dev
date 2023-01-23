@@ -9,7 +9,6 @@ const allJobs = await Astro.glob('./jobs/*.md');
 	<div class="main-info">
 		{allJobs.map((job) => <ResumeItem jobData={job} />)}
 	</div>
-	<SideNav activeTab="Resume" />
 </div>
 
 <style>
@@ -17,6 +16,6 @@ const allJobs = await Astro.glob('./jobs/*.md');
 		display: flex;
 	}
 	.main-info {
-		width: 45rem;
+		width: 55rem;
 	}
 </style>

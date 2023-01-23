@@ -1,11 +1,9 @@
 ---
-// export interface Props {
-// 	title: string;
-// 	body: string;
-// 	href: string;
-// }
+export interface Props {
+	homePage: boolean;
+}
 
-// const { href, title, body } = Astro.props;
+ const { homePage } = Astro.props;
 ---
 
 <div class="header-container">
@@ -17,6 +15,9 @@
         </div>
     </div>
     <div class="header-social-links">
+		<a href={homePage ? "/resume" : "/"}>
+			{homePage ? "Resume" : "Bio"}
+		</a>
         <a href="https://twitter.com/StephenBrinkDev"
         target="_blank">
             Twitter
