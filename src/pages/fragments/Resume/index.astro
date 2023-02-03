@@ -1,10 +1,11 @@
 ---
-import SideNav from "../../../components/SideNav.astro";
 import ResumeItem from "../../../components/ResumeItem.astro"
+import Header from '../../../components/Header.astro';
 
 const allJobs = await Astro.glob('./jobs/*.md');
 ---
 
+<Header homePage={false} />
 <div class="main-container">
 	<div class="main-info">
 		{allJobs.map((job) => <ResumeItem jobData={job} />)}
